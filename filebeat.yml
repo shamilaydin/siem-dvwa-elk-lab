@@ -1,0 +1,10 @@
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - /var/log/apache2/access.log
+  fields:
+    service: dvwa-apache
+
+output.logstash:
+  hosts: ["192.168.56.10:5044"]
